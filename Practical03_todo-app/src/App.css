@@ -1,0 +1,63 @@
+.app {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+.add-form {
+  display: flex;
+  gap: 8px;
+}
+.add-form input {
+  flex: 1;
+  padding: 8px;
+}
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  background: #2563eb;
+  color: #fff;
+}
+.filters {
+  margin: 12px 0;
+  display: flex;
+  gap: 6px;
+}
+.filters button {
+  background: #e2e8f0;
+  color: #111;
+  text-transform: capitalize;
+}
+.filters button.active {
+  background: #2563eb;
+  color: #fff;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+li span {
+  cursor: pointer;
+}
+li.done span {
+  text-decoration: line-through;
+  color: #888;
+}
+.del {
+  background: #dc2626;
+}
+.count {
+  color: #555;
+  font-size: 14px;
+}
