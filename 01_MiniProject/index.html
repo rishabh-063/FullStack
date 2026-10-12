@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do list</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="loginView" class="login-view">
+      <form id="loginForm" class="login-form">
+        <h1>Sign in</h1>
+        <p>Enter your name to continue.</p>
+        <label for="loginName">Name</label>
+        <input id="loginName" name="name" type="text" autocomplete="name" minlength="2" required />
+        <button class="primary-button" type="submit">Continue</button>
+      </form>
+    </main>
+
+    <main id="todoView" class="todo-view" hidden>
+      <header class="topbar">
+        <span id="userGreeting"></span>
+        <button id="logoutButton" class="clear-button" type="button">Sign out</button>
+      </header>
+      <section class="dashboard-content" aria-labelledby="dashboardTitle">
+        <div class="dashboard-heading">
+          <h1 id="dashboardTitle">My tasks</h1>
+        </div>
+
+        <section class="task-composer" aria-label="Add a task">
+          <input id="taskInput" type="text" maxlength="120" placeholder="What would you like to get done?" aria-label="New task" />
+          <button class="primary-button add-button" id="addTaskButton" type="button">Add task <span aria-hidden="true">&#8594;</span></button>
+        </section>
+        <p class="task-error" id="taskError" role="status" aria-live="polite"></p>
+
+        <div class="list-heading"><h2>Your tasks <span id="taskCount">0</span></h2><button class="clear-button" id="clearCompleted" type="button" hidden>Clear completed</button></div>
+        <div class="filter-row" role="group" aria-label="Filter tasks">
+          <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All <span id="allCount">0</span></button>
+          <button class="filter-button" type="button" data-filter="active" aria-pressed="false">In progress <span id="activeCount">0</span></button>
+          <button class="filter-button" type="button" data-filter="completed" aria-pressed="false">Completed <span id="completedCount">0</span></button>
+        </div>
+        <ul class="task-list" id="taskList" aria-live="polite"></ul>
+        <div class="empty-state" id="emptyState"><p class="empty-title">A little space to start.</p><p>Your next task can go right here.</p></div>
+        <footer class="dashboard-footer"><span>Saved on this device</span><span id="taskSummary">One thing at a time.</span></footer>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
