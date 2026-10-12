@@ -1,0 +1,69 @@
+/* Basic layout for the form */
+:root {
+    font-family: Segoe UI, Roboto, Arial, Helvetica, sans-serif
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #f6f8fa;
+    margin: 0
+}
+
+main {
+    width: 360px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08)
+}
+
+h1 {
+    margin: 0 0 12px;
+    font-size: 20px
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 13px
+}
+
+input {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 6px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 14px
+}
+
+button {
+    margin-top: 16px;
+    width: 100%;
+    padding: 10px;
+    background: #0b5cff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600
+}
+
+.errors {
+    margin-top: 12px;
+    color: #b00020;
+    font-size: 13px
+}
+
+.errors ul {
+    margin: 0;
+    padding-left: 18px
+}
+
+.invalid {
+    border-color: #b00020
+}
